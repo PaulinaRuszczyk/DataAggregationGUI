@@ -20,9 +20,21 @@ public:
 
 private slots:
     void on_ListsOfObjects_itemActivated(QListWidgetItem *item);
-   // void on
+    void onMouseMove(QMouseEvent *event);
+
+    void on_m_searchBox_selectionChanged();
+    void on_m_searchBox_textChanged();
+
+    void on_m_showQuantityButton_pressed();
+
+    void on_pushButton_pressed();
+
+    void on_pushButton_2_pressed();
 
 private:
+    void okClicked();
+    void InsertButtonClicked(std::string name, std::string id);
+    bool begginigOfSearch;
     CDataBase* m_dataBase;
     QCustomPlot *m_customPlot;
     Ui::MainWindow *ui;
